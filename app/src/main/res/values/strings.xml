@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Baat Karo</string>
+    <string name="login_text_view1">Please Enter Your Credentials</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="name">Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign Up</string>
+</resources>

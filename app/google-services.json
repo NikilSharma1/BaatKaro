@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "74098977846",
+    "project_id": "baat-karo-307ec",
+    "storage_bucket": "baat-karo-307ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:74098977846:android:ca0f16c6bc24ca1540bc97",
+        "android_client_info": {
+          "package_name": "com.example.baatkaro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "74098977846-046slog0s2l0a836ubgoo7vtdc5glkdh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfFsIMK3LQ-k2mjEbrcfeWcRkvwbmDEZs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "74098977846-046slog0s2l0a836ubgoo7vtdc5glkdh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
