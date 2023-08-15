@@ -20,15 +20,38 @@
         </include>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/users_recyclerview"
+            android:id="@+id/recent_users"
             android:layout_width="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:layout_height="wrap_content"
-            android:padding="@dimen/_10sdp"
-            android:background="@drawable/background_users_list">
-        </androidx.recyclerview.widget.RecyclerView>
+            android:clipToPadding="false"
+            android:orientation="vertical">
 
+        </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
 
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_6sdp"
+        android:gravity="end">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_height="wrap_content">
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingbutton"
+                android:layout_width="@dimen/_60sdp"
+                android:backgroundTint="@color/primary"
+                android:src="@drawable/baseline_person_add_24"
+                android:layout_height="@dimen/_50sdp">
+
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        </LinearLayout>
+    </LinearLayout>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"
         android:layout_width="wrap_content"

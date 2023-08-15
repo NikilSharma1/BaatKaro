@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/signout"
-        android:title="Sign Out"></item>
+    <item android:id="@+id/home_menu"
+        android:title="Home"
+        android:icon="@drawable/home_menu">
+    </item>
+
+    <item android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/profile">
+    </item>
+
+    <item
+        android:id="@+id/signout"
+        android:title="Sign Out"
+        android:icon="@drawable/signout"></item>
 </menu>

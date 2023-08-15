@@ -15,6 +15,9 @@
         android:theme="@style/Theme.BaatKaro"
         tools:targetApi="31">
         <activity
+            android:name=".chatRelated.PersonalChatActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.SelectUserActivity"
             android:exported="false" />
         <activity

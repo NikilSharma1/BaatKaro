@@ -32,15 +32,15 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         sharedPreferences=getSharedPreferences(Fields.PREFERENCES_NAME,MODE_PRIVATE);
 
-        triggerToast(String.valueOf(sharedPreferences.getBoolean(Fields.SIGN_IN_STATUS,false))+" 65");
+        //triggerToast(String.valueOf(sharedPreferences.getBoolean(Fields.SIGN_IN_STATUS,false))+" 65");
         if(sharedPreferences.getBoolean(Fields.SIGN_IN_STATUS,false)){
             Intent intent=new Intent(getApplicationContext(), UsersListActivity.class);
             triggerToast(String.valueOf(sharedPreferences.getBoolean(Fields.SIGN_IN_STATUS,false)));
             startActivity(intent);
         }
-        clickOnTextViews();
+        clickOnViews();
     }
-    public void clickOnTextViews(){
+    public void clickOnViews(){
         binding.newaccounttextview.setOnClickListener(view -> {
            startActivity(new Intent(getApplicationContext(),SignUpActivity.class));
         });
@@ -69,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
                             SharedPreferences.Editor editor=sharedPreferences.edit();
                             editor.putBoolean(Fields.SIGN_IN_STATUS,true);
                             editor.putString(Fields.USER_ID,documentSnapshot.getId());
-                            editor.putString(Fields.PERSON_NAME,documentSnapshot.getString(Fields.PERSON_EMAIL));
+                            editor.putString(Fields.PERSON_NAME,documentSnapshot.getString(Fields.PERSON_NAME));
                             editor.putString(Fields.PERSON_IMAGE,documentSnapshot.getString(Fields.PERSON_IMAGE));
                             editor.commit();
                             Intent intent=new Intent(getApplicationContext(), UsersListActivity.class);
@@ -91,7 +91,7 @@ public class LoginActivity extends AppCompatActivity {
             triggerToast("Enter Email");
             return false;
         }else if(!Patterns.EMAIL_ADDRESS.matcher(binding.loginEmail.getText().toString().trim()).matches()){
-            triggerToast("Valid Email");
+            triggerToast("Enter Valid Email");
             return false;
         }else if(binding.loginPassword.getText().toString().trim().isEmpty()){
             triggerToast("Enter Email");

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_10sdp"
+    android:background="@color/white"
+    tools:context=".chatRelated.PersonalChatActivity">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/back_image"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+
+        android:background="@drawable/baseline_arrow_back_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </com.google.android.material.imageview.ShapeableImageView>
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_20sdp"
+        android:textSize="@dimen/_13ssp"
+        android:textStyle="bold"
+        android:text="User Name"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/back_image"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/message_recyclerview"
+        android:layout_width="match_parent"
+        android:padding="@dimen/_10sdp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/message_edittext"
+        app:layout_constraintTop_toBottomOf="@id/user_name"
+        tools:layout_editor_absoluteX="13dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ImageView
+        android:id="@+id/send_imageview"
+        android:layout_width="0dp"
+
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/baseline_send_24"
+        android:layout_marginLeft="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </ImageView>
+
+    <EditText
+        android:id="@+id/message_edittext"
+        android:layout_width="@dimen/_270sdp"
+        android:layout_height="0dp"
+        android:padding="@dimen/_6sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        android:hint="type your message here"
+        android:background="@drawable/background_shape_edittext"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></EditText>
+</androidx.constraintlayout.widget.ConstraintLayout>
