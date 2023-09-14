@@ -48,6 +48,7 @@ public class PersonalChatActivity extends AppCompatActivity {
     private MessageAdapter messageAdapter;
     private FirebaseFirestore database;
     private ArrayList<Message>messageArrayList;
+    private LinearLayoutManager layoutManager;
     private String chat_id=null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +67,8 @@ public class PersonalChatActivity extends AppCompatActivity {
         clickOnViews();
 
         messageArrayList=new ArrayList<>();
+        layoutManager=(LinearLayoutManager) binding.messageRecyclerview.getLayoutManager();
+        layoutManager.setStackFromEnd(true);
         messageAdapter=new MessageAdapter(getApplicationContext(),messageArrayList,sharedPreferences.getString(Fields.USER_ID,null));
         binding.messageRecyclerview.setAdapter(messageAdapter);
 
@@ -203,5 +206,6 @@ public class PersonalChatActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         startActivity(new Intent(getApplicationContext(), UsersListActivity.class));
+        finish();
     }
 }
