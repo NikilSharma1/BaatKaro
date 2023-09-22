@@ -21,6 +21,8 @@ import android.widget.Toast;
 
 import com.example.baatkaro.R;
 import com.example.baatkaro.chatRelated.Message;
+import com.example.baatkaro.chatRelated.PersonalChatActivity;
+import com.example.baatkaro.chatRelated.RecentChatListener;
 import com.example.baatkaro.chatRelated.RecentMessagesAdapter;
 import com.example.baatkaro.databinding.ActivityUsersListBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -46,7 +48,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Locale;
 
-public class UsersListActivity extends AppCompatActivity {
+public class UsersListActivity extends AppCompatActivity implements RecentChatListener {
 
     private ActivityUsersListBinding binding;
     private Toolbar toolbar;
@@ -69,7 +71,7 @@ public class UsersListActivity extends AppCompatActivity {
         sharedPreferences=getSharedPreferences(Fields.PREFERENCES_NAME,MODE_PRIVATE);
         database=FirebaseFirestore.getInstance();
         recent_chats_arraylist=new ArrayList<>();
-        recentMessagesAdapter=new RecentMessagesAdapter(getApplicationContext(),recent_chats_arraylist);
+        recentMessagesAdapter=new RecentMessagesAdapter(getApplicationContext(),recent_chats_arraylist,this);
         binding.recentUsers.setAdapter(recentMessagesAdapter);
 
         //binding.navigationView.getMenu().findItem(R.id.name).setTitle(sharedPreferences.getString(Fields.PERSON_NAME,null));
@@ -230,5 +232,14 @@ public class UsersListActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onChatClicked(SingleUserData singleUserData) {
+        Intent intent=new Intent(getApplicationContext(),PersonalChatActivity.class);
+
+        intent.putExtra(Fields.SELECTED_USER,singleUserData);
+        startActivity(intent);
+        finish();
     }
 }

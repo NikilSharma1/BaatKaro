@@ -56,7 +56,7 @@ public class PersonalChatActivity extends AppCompatActivity {
         binding=ActivityPersonalChatBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        //let's get the data from the intent that was called from selectuseractivity
+        //let's get the data from the intent that was called from selectuseractivity or recent chat lists
         user=(SingleUserData) getIntent().getSerializableExtra(Fields.SELECTED_USER); //RECEIVER USER i.e person with whom we are chatting
 
         //let's set the textview with user.name

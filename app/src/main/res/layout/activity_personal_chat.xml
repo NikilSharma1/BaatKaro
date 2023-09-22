@@ -56,13 +56,14 @@
         android:background="@drawable/baseline_send_24"
         android:layout_marginLeft="@dimen/_10sdp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/message_edittext"
         app:layout_constraintEnd_toEndOf="parent">
 
     </ImageView>
 
     <EditText
         android:id="@+id/message_edittext"
-        android:layout_width="@dimen/_270sdp"
+        android:layout_width="@dimen/_260sdp"
         android:layout_height="0dp"
         android:padding="@dimen/_6sdp"
         android:textColor="@color/black"

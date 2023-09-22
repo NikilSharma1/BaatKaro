@@ -14,28 +14,43 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.baatkaro.R;
+import com.example.baatkaro.activities.SingleUserData;
 
 import java.util.ArrayList;
 
 public class RecentMessagesAdapter extends RecyclerView.Adapter<RecentMessagesAdapter.ViewHolder> {
     Context context;
     private ArrayList<Message>messageArrayList;
-    public RecentMessagesAdapter(Context context,ArrayList<Message>messageArrayList){
+    private RecentChatListener recentChatListener;
+    public RecentMessagesAdapter(Context context,ArrayList<Message>messageArrayList,RecentChatListener recentChatListener){
         this.context=context;
         this.messageArrayList=messageArrayList;
+        this.recentChatListener=recentChatListener;
     }
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(context).inflate(R.layout.recent_users_item_view,parent,false);
-        return new ViewHolder(view);
+        ViewHolder viewHolder=new ViewHolder(view);
+
+        return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.name.setText(messageArrayList.get(position).chat_user_name);
-        holder.recentMessage.setText(messageArrayList.get(position).message);
-        holder.icon_image.setImageBitmap(getIconImage(messageArrayList.get(position).chat_user_icon));
+        holder.name.setText(messageArrayList.get(holder.getAdapterPosition()).chat_user_name);
+        holder.recentMessage.setText(messageArrayList.get(holder.getAdapterPosition()).message);
+        holder.icon_image.setImageBitmap(getIconImage(messageArrayList.get(holder.getAdapterPosition()).chat_user_icon));
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SingleUserData singleUserData=new SingleUserData();
+                singleUserData.setId(messageArrayList.get(holder.getAdapterPosition()).chat_id);
+                singleUserData.setName(messageArrayList.get(holder.getAdapterPosition()).chat_user_name);
+                singleUserData.setImage(messageArrayList.get(holder.getAdapterPosition()).chat_user_icon);
+                recentChatListener.onChatClicked(singleUserData);
+            }
+        });
     }
 
     @Override
