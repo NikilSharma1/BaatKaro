@@ -35,7 +35,8 @@ show all the users on the app.
 
 **USERS LIST ACTIVITY**
 
-![users_list](https://github.com/NikilSharma1/BaatKaro/assets/91516900/ed9916ea-f119-47aa-9d08-47cc2266ff67)
+![users_list (2)](https://github.com/NikilSharma1/BaatKaro/assets/91516900/4c0d11fe-2997-437e-9d6b-0b6cc82e44d4)
+
 
 
 When a user is clicked it will open *personal chat activity* where two of them can converse with each other.
@@ -50,11 +51,14 @@ When a user has communicated with someone than that conversation will reflect in
 
 
 **CHAT SUMMARY**
-![chat_sum](https://github.com/NikilSharma1/BaatKaro/assets/91516900/98c7a053-6889-4664-8694-10e958afe939)
+
+![chat_sum](https://github.com/NikilSharma1/BaatKaro/assets/91516900/8d3677a3-5c6b-4188-b36d-d7ce4e8f2f16)
+
 
 
 
 **NAVIGATION DRAWER FOR SIGNOUT AND OTHER PURPOSES**
+
 ![nav_drawer](https://github.com/NikilSharma1/BaatKaro/assets/91516900/128e33f3-b636-4f47-86c8-9d0fdcebe1c8)
 
 
