@@ -35,7 +35,7 @@ show all the users on the app.
 
 **USERS LIST ACTIVITY**
 
-![users_list (2)](https://github.com/NikilSharma1/BaatKaro/assets/91516900/4c0d11fe-2997-437e-9d6b-0b6cc82e44d4)
+![users_list](https://github.com/NikilSharma1/BaatKaro/assets/91516900/8d3677a3-5c6b-4188-b36d-d7ce4e8f2f16)
 
 
 
@@ -55,7 +55,7 @@ When a user has communicated with someone than that conversation will reflect in
 **CHAT SUMMARY**
 
 
-![chat_sum](https://github.com/NikilSharma1/BaatKaro/assets/91516900/8d3677a3-5c6b-4188-b36d-d7ce4e8f2f16)
+![chat_sum](https://github.com/NikilSharma1/BaatKaro/assets/91516900/4c0d11fe-2997-437e-9d6b-0b6cc82e44d4)
 
 
 
