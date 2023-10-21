@@ -50,7 +50,10 @@ When a user is clicked it will open *personal chat activity* where two of them c
 When a user has communicated with someone than that conversation will reflect in recent chats.
 
 
+
+
 **CHAT SUMMARY**
+
 
 ![chat_sum](https://github.com/NikilSharma1/BaatKaro/assets/91516900/8d3677a3-5c6b-4188-b36d-d7ce4e8f2f16)
 
@@ -58,6 +61,7 @@ When a user has communicated with someone than that conversation will reflect in
 
 
 **NAVIGATION DRAWER FOR SIGNOUT AND OTHER PURPOSES**
+
 
 ![nav_drawer](https://github.com/NikilSharma1/BaatKaro/assets/91516900/128e33f3-b636-4f47-86c8-9d0fdcebe1c8)
 
