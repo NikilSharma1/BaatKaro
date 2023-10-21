@@ -29,7 +29,7 @@ If user has an account he/she can enter after filling the details and if they do
 
 
 So after either straight up logging in or creating new account new activity will open which is meant for showing the latest chat of the user with users.
-In the starting it will be empty page hence there is a floating button given at the bottom right of that activity if clicked will open another activity which will 
+In the starting it will be empty page hence there is a floating button given at the bottom right of that activity(can be seen on the *chat summary activity*), if clicked will open another activity which will 
 show all the users on the app.
 
 
